@@ -1,20 +1,19 @@
 const misNotas = [
-    { titulo: 'truco de VSCode',
-        cuerpo: 'usar snippets para todo' },
+    {
+        titulo: 'truco de VSCode',
+        cuerpo: 'usar snippets para todo'
+    },
     { titulo: 'la función filter', cuerpo: 'genera un nuevo array según un criterio' },
     { titulo: 'la función map', cuerpo: 'genera un nuevo array a partir de otro' },
     { titulo: 'la función foreach', cuerpo: 'permite ejecutar código para cada elemento de un array' },
     { titulo: 'la función sort', cuerpo: 'ordena según un criterio cualquiera' }
 ]
 
-const crearNota = function (lasNotas, titulo, cuerpo) {
+const crearNota = (lasNotas, titulo, cuerpo) => {
     // buscar si existe la nota
     const indice = lasNotas.findIndex(
-        function (nota) {
-            return nota.titulo == titulo
-        }
+        (nota) => nota.titulo == titulo
     )
-
     if (indice === -1) {
         console.log('Nota creada')
         return lasNotas.push({ titulo: titulo, cuerpo }) // cuerpo:cuerpo
@@ -24,10 +23,8 @@ const crearNota = function (lasNotas, titulo, cuerpo) {
     }
 }
 
-const borrarNota = function (lasNotas, titulo) {
-    const indice = lasNotas.findIndex(function (nota) {
-        return nota.titulo === titulo
-    })
+const borrarNota = (lasNotas, titulo) => {
+    const indice = lasNotas.findIndex((nota) => nota.titulo === titulo)
     if (indice === -1) {
         console.log('Nota no encontrada')
         return {}
@@ -38,10 +35,8 @@ const borrarNota = function (lasNotas, titulo) {
     }
 }
 
-const borrarNota2 = function (lasNotas, titulo) {
-    const notasFiltradas = lasNotas.filter(function (nota) {
-        return nota.titulo !== titulo
-    })
+const borrarNota2 = (lasNotas, titulo) => {
+    const notasFiltradas = lasNotas.filter((nota) => nota.titulo !== titulo)
     if (lasNotas.length > notasFiltradas.length) {
         console.log('Notas borradas')
         return lasNotas.find(function (nota) {
@@ -53,10 +48,11 @@ const borrarNota2 = function (lasNotas, titulo) {
     }
 }
 
-const ordenarNotas = function (lasNotas, opcion) {
+const ordenarNotas = (lasNotas, opcion) => {
     /* opcion: titulo, cuerpo */
     if (opcion === 'titulo') {
-        return lasNotas.sort(function (notaA, notaB) {
+        return lasNotas.sort((notaA, notaB) => {
+            debugger
             if (notaA.titulo.toLowerCase() < notaB.titulo.toLowerCase()) {
                 return -1
             } else if (notaA.titulo.toLowerCase() > notaB.titulo.toLowerCase()) {
@@ -66,7 +62,7 @@ const ordenarNotas = function (lasNotas, opcion) {
             }
         })
     } else {
-        return lasNotas.sort(function (notaA, notaB) {
+        return lasNotas.sort((notaA, notaB) => {
             if (notaA.cuerpo.toLowerCase() < notaB.cuerpo.toLowerCase()) {
                 return -1
             } else if (notaA.cuerpo.toLowerCase() > notaB.cuerpo.toLowerCase()) {
@@ -78,8 +74,8 @@ const ordenarNotas = function (lasNotas, opcion) {
     }
 }
 
-const ordenarNotas2 = function (lasNotas, opcion) {
-    return lasNotas.sort(function (notaA, notaB) {
+const ordenarNotas2 = (lasNotas, opcion) => {
+    return lasNotas.sort((notaA, notaB) => {
         if (notaA[opcion].toLowerCase() < notaB[opcion].toLowerCase()) {
             return -1
         } else if (notaA[opcion].toLowerCase() > notaB[opcion].toLowerCase()) {
@@ -90,12 +86,12 @@ const ordenarNotas2 = function (lasNotas, opcion) {
     })
 }
 
-const buscarTextoEnNotas = function (lasNotas, texto) {
-    const notaEncontrada = lasNotas.find(function (nota) {
+const buscarTextoEnNotas = (lasNotas, texto) => {
+    const notaEncontrada = lasNotas.find((nota) => {
         return nota.titulo.toLowerCase().includes(texto) || nota.cuerpo.toLowerCase().includes(texto)
     })
 
-    if(notaEncontrada){
+    if (notaEncontrada) {
         console.log('Nota encontrada')
         return notaEncontrada
     } else {

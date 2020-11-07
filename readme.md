@@ -1,8 +1,8 @@
 # Aplicación de notas
 
-Versión 1: 
+Versión 2: 
  + las notas se definen **literalmente**.
- + se utiliza la notación *function*.
+ + se utiliza la notación *arrow function*.
 
 ##### Enunciado
 > generar las siguientes funciones:
