@@ -4,12 +4,16 @@
   "description": "",
   "main": "notas.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app",
+    "start_mon": "nodemon app"
   },
   "author": "Xavier",
   "license": "ISC",
   "dependencies": {
     "chalk": "^4.1.0",
     "yargs": "^16.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
   }
 }

@@ -19,11 +19,11 @@ const ordenarNotas(lasNotas, opcion) : notasOrdenadas
 const buscarTextoEnNotas(lasNotas, texto): laNota
 ````
 
-Para testar esta solución:
+Para instalar esta solución:
 >npm install
 
->node app
->+ add --titulo="..." --cuerpo="..."
->+ remove --titulo="..."
->+ sort --criterio="..."
->+ find --texto="..."
+Para usar esta solución:
+>+ node app add --titulo="..." --cuerpo="..."
+>+ node app remove --titulo="..."
+>+ node app sort --criterio="..."
+>+ node app find --texto="..."
