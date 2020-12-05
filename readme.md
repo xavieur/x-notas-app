@@ -26,8 +26,8 @@ Para instalar esta solución:
 Para usar esta solución:
 
 ````shell script
->+ node app add --titulo="..." --cuerpo="..."
->+ node app remove --titulo="..."
->+ node app sort --criterio="..."
->+ node app find --texto="..."
+node app add --titulo="..." --cuerpo="..."
+node app remove --titulo="..."
+node app sort --criterio="..."
+node app find --texto="..."
 ````
