@@ -1,6 +1,7 @@
 # Aplicación de notas
 
 Versión 3: 
+
  + las notas se leen/guardan en un **fichero** en formato JSON.
  + la aplicación (app.js):
    + usa módulos propios (notas.js) para organizar el código.
